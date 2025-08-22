@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Righteous } from "next/font/google";
 import "../index.css";
 import Providers from "@/components/providers";
 import Header from "@/components/header";
 
-const geistSans = Geist({
-	variable: "--font-geist-sans",
+const bricolageGrotesque = Bricolage_Grotesque({
+	variable: "--font-bricolage-grotesque",
 	subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
+const righteous = Righteous({
+	variable: "--font-righteous",
 	subsets: ["latin"],
+	weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -27,11 +28,11 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+				className={`${bricolageGrotesque.variable} ${righteous.variable} antialiased`} suppressHydrationWarning
 			>
 				<Providers>
-					<div className="grid grid-rows-[auto_1fr] h-svh">
-						<Header />
+					<div className="bg-background grid grid-rows-[auto_1fr] min-h-svh ">
+						{/* <Header /> */}
 						{children}
 					</div>
 				</Providers>
