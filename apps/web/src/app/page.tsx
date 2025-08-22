@@ -35,25 +35,25 @@ export default function Home() {
 		};
 	}, []);
 
-	useGSAP(() => {
-		const timer = setTimeout(() => {
-			// hero animation
-			//   heroTitleAnim();
-			//   heroBgAnimation();
-			//   // bounce animation
-			//   bounceAnimation();
-			//   // video anim
-			//   videoAnimTwo();
-			//   // panel animation
-			//   panelOneAnimation();
-			//   // award animation
-			//   awardAnimOne();
-			//   // instagram animation
-			//   instagramAnim();
-			hoverBtn();
-		}, 100)
-		return () => clearTimeout(timer);
-	});
+	// useGSAP(() => {
+	// 	const timer = setTimeout(() => {
+	// 		// hero animation
+	// 		//   heroTitleAnim();
+	// 		//   heroBgAnimation();
+	// 		//   // bounce animation
+	// 		//   bounceAnimation();
+	// 		//   // video anim
+	// 		//   videoAnimTwo();
+	// 		//   // panel animation
+	// 		//   panelOneAnimation();
+	// 		//   // award animation
+	// 		//   awardAnimOne();
+	// 		//   // instagram animation
+	// 		//   instagramAnim();
+	// 		hoverBtn();
+	// 	}, 100)
+	// 	return () => clearTimeout(timer);
+	// });
 	return (
 		<div id="smooth-wrapper" className='bg-background'>
 			<div id="smooth-content">
@@ -104,43 +104,13 @@ export default function Home() {
 					</section>
 					{/* End of Hero */}
 					{/* About */}
-					<section className="min-h-1/2 rounded-lg border p-4">
-						<h2 className="mb-2 font-medium">About</h2>
-						<div className="w-hover-btn-wrapper">
-							<Link
-								className="tp-btn-circle w-hover-btn-item w-hover-btn"
-								href="/portfolio-details-1"
-							>
-								<span className="tp-btn-circle-text">
-									See Our <br /> Awards
-								</span>
-								<span className="tp-btn-circle-icon">
-									<svg
-										width="12"
-										height="12"
-										viewBox="0 0 12 12"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M1 11L11 1"
-											stroke={'currentColor'}
-											strokeWidth="1.5"
-											strokeLinecap="round"
-											strokeLinejoin="round"
-										/>
-										<path
-											d="M1 1H11V11"
-											stroke={'currentColor'}
-											strokeWidth="1.5"
-											strokeLinecap="round"
-											strokeLinejoin="round"
-										/>
-									</svg>
-								</span>
-								<i className="tp-btn-circle-dot"></i>
-							</Link>
-						</div>
+					<section className="w-full py-2 flex flex-col text-[#BACDB0] px-3">
+						<h2 className="mb-2 font-light text-xl">(About Lavanya)</h2>
+						<p className="text-2xl font-medium leading-tight ">
+							I'm a visual brand storyteller with a passion for creating compelling visual narratives.
+							My journey in the world of design has taken me to various roles, from brand strategist to visual designer.
+							I thrive on turning complex ideas into visually stunning and impactful designs that resonate with audiences.
+						</p>
 					</section>
 					{/* End of About */}
 					{/* FunFact */}
