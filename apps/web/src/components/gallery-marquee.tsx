@@ -40,7 +40,8 @@ export type GalleryMarqueeProps = {
     imgProps?: Partial<Omit<ImageProps, "src" | "alt">>;
 };
 
-const GalleryMarquee: React.FC<GalleryMarqueeProps> = ({
+const GalleryMarquee: React.FC<GalleryMarqueeProps & { ref: React.Ref<HTMLDivElement> }> = ({
+    ref,
     images,
     speed = 100,
     direction = "left",
@@ -55,7 +56,7 @@ const GalleryMarquee: React.FC<GalleryMarqueeProps> = ({
     imgProps,
 }) => {
     return (
-        <div className={`relative w-svw max-w-svw lg:gallery-marquee-fade ${containerClassName}`}>
+        <div ref={ref} className={`relative w-svw max-w-svw lg:gallery-marquee-fade ${containerClassName}`}>
             {(shape1Light || shape1Dark) && (
                 <div className={cn("absolute inset-x-0 top-0 z-10 pointer-events-none w-svw", shape1ClassName)}>
                     {shape1Light && (
