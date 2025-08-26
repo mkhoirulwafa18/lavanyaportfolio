@@ -6,17 +6,17 @@ export type FunFact = {
 
 export const funFactList: FunFact[] = [
   {
-    image: "/fun-fact-1.jpg",
+    image: "/funfacts/fun-fact-1.jpg",
     description: "Projects delivered with a focus on impactful brand stories.",
     number: 24,
   },
   {
-    image: "/fun-fact-2.jpg",
+    image: "/funfacts/fun-fact-2.jpg",
     description: "Brands transformed through cohesive visual identities.",
     number: 18,
   },
   {
-    image: "/fun-fact-3.jpg",
+    image: "/funfacts/fun-fact-3.jpg",
     description: "Design awards and nominations earned across campaigns.",
     number: 7,
   },
@@ -95,5 +95,34 @@ export const services: Service[] = [
     imageUrl: "/images/services/image-4.jpg",
     bgColor: "#f4e89b",
     textColor: "#EF4A74"
+  },
+];
+
+type SocialLink = {
+  title: string;
+  url: string;
+  videoUrl: string;
+};
+
+export const socialLinks: SocialLink[] = [
+  {
+    title: "Instagram",
+    url: "https://www.instagram.com/jazziwong_/",
+    videoUrl: "videos/instagram.webm",
+  },
+  {
+    title: "YouTube",
+    url: "https://www.youtube.com/@jazziwong",
+    videoUrl: "videos/youtube.webm",
+  },
+  {
+    title: "Unsplash",
+    url: "https://unsplash.com/@jazziwong",
+    videoUrl: "videos/unsplash.webm",
+  },
+  {
+    title: "TikTok",
+    url: "https://www.tiktok.com/@jazziwong",
+    videoUrl: "videos/tiktok.webm",
   },
 ];

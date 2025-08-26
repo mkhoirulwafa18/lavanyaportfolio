@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Righteous } from "next/font/google";
 import "../index.css";
-import Providers from "@/components/providers";
-import Header from "@/components/header";
+import { ContactModalProvider } from "@/contexts/contact-modal-context";
+import { FooterProvider } from "@/contexts/footer-context";
+import TitleChanger from "@/components/title-changer";
 
 const bricolageGrotesque = Bricolage_Grotesque({
 	variable: "--font-bricolage-grotesque",
@@ -30,12 +31,14 @@ export default function RootLayout({
 			<body
 				className={`${bricolageGrotesque.variable} ${righteous.variable} antialiased`} suppressHydrationWarning
 			>
-				<Providers>
-					<div className="bg-background grid grid-rows-[auto_1fr] min-h-svh ">
-						{/* <Header /> */}
-						{children}
-					</div>
-				</Providers>
+				<TitleChanger />
+				<FooterProvider>
+					<ContactModalProvider>
+						<div className="bg-background grid grid-rows-[auto_1fr] min-h-svh ">
+							{children}
+						</div>
+					</ContactModalProvider>
+				</FooterProvider>
 			</body>
 		</html>
 	);

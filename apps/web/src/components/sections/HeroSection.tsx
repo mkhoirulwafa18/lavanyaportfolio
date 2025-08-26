@@ -42,15 +42,24 @@ export default function Hero() {
             // container zoom + reposition
             tl.fromTo(
                 containerRef.current,
-                { scale: initialScale, top: "50%", yPercent: -50 },
+                { scale: initialScale, },
                 {
                     scale: 1,
-                    top: 0,
-                    yPercent: 0,
-                    duration: 3.6,
+                    // top: 0,
+                    // yPercent: 0,
+                    duration: 1.5,
                     ease: "power3.out",
-                }
+                }, 1.25
             );
+
+            tl.fromTo(
+                containerRef.current,
+                { top: "50%", yPercent: -50 },
+                {
+                    top: 0, yPercent: 0,
+                    ease: "power2.out"
+                }, 2.75
+            )
 
             // Lavanya text
             tl.fromTo(
@@ -81,7 +90,7 @@ export default function Hero() {
                 galleryRef.current,
                 { y: 50, opacity: 0 },
                 { y: 0, opacity: 1, duration: 1.5, ease: "power3.out" },
-                width < 768 ? 1.9 : 1.9
+                3
             );
             // Star
             tl.fromTo(
