@@ -97,7 +97,7 @@ export default function Hero() {
                 starRef.current,
                 { y: 120 },
                 { y: 0, duration: 1.5, ease: "power3.out" },
-                1.7
+                width < 768 ? 3.05 : 2.85
             );
 
             // SubHeadline
@@ -105,7 +105,7 @@ export default function Hero() {
                 subHeadlineRef.current,
                 { y: 120 },
                 { y: 0, duration: 1.5, ease: "power3.out" },
-                width < 768 ? 2.05 : 1.9
+                width < 768 ? 3.05 : 2.85
             );
         });
 
@@ -153,7 +153,7 @@ export default function Hero() {
                 </div>
 
                 {/* Gallery */}
-                <div className="mt-[24vh] xs:mt-[27vh] sm:mt-[15vh] md:mt-[14vw]">
+                <div className="mt-[24vh] xs:mt-[27vh] sm:mt-[15vh] md:mt-[18vw]">
                     <GalleryMarquee
                         ref={galleryRef}
                         images={gallery_images}
@@ -183,13 +183,13 @@ export default function Hero() {
                         </div>
 
                         {/* Star */}
-                        <div className="hidden md:block overflow-hidden absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+                        <div className="hidden md:block overflow-hidden ">
                             <div
                                 ref={starRef}
                                 className="w-[clamp(28px,2vw,48px)] h-[clamp(28px,2vw,48px)] relative group"
                             >
                                 <Image
-                                    src="/images/icons/star.svg"
+                                    src="/star.svg"
                                     alt="star"
                                     fill
                                     sizes="(max-width: 768px) 28px, 48px"
@@ -201,7 +201,7 @@ export default function Hero() {
                         <div className="overflow-hidden">
                             <p
                                 ref={subHeadlineRef}
-                                className={` text-[clamp(20px,1.6vw,32px)] font-light leading-tight -tracking-tight -mt-1 text-center md:text-left`}
+                                className={`text-[clamp(20px,1.6vw,32px)] font-light leading-tight -tracking-tight -mt-1 text-center md:text-left`}
                             >
                                 Translating ideas into captivating visuals that resonate and inspire.
                             </p>
