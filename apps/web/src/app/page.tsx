@@ -4,7 +4,7 @@ import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { gsap } from 'gsap';
 import { useEffect } from 'react';
-import FunFactSection from '@/components/funfact-section';
+import FunFactSection from '@/components/sections/funfact-section';
 import Hero from '@/components/sections/HeroSection';
 import Services from '@/components/sections/ServicesSection';
 import Footer from "@/components/sections/FooterSection";

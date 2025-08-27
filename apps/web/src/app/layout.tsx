@@ -4,6 +4,7 @@ import "../index.css";
 import { ContactModalProvider } from "@/contexts/contact-modal-context";
 import { FooterProvider } from "@/contexts/footer-context";
 import TitleChanger from "@/components/title-changer";
+import ContactModal from "@/components/contact-modal";
 
 const bricolageGrotesque = Bricolage_Grotesque({
 	variable: "--font-bricolage-grotesque",
@@ -31,12 +32,13 @@ export default function RootLayout({
 			<body
 				className={`${bricolageGrotesque.variable} ${righteous.variable} antialiased`} suppressHydrationWarning
 			>
-				<TitleChanger />
 				<FooterProvider>
 					<ContactModalProvider>
+						<TitleChanger />
 						<div className="bg-background grid grid-rows-[auto_1fr] min-h-svh ">
 							{children}
 						</div>
+						<ContactModal />
 					</ContactModalProvider>
 				</FooterProvider>
 			</body>

@@ -58,7 +58,7 @@ export default function DesktopSocials() {
                             className={`${index === socialLinks.length - 1
                                 ? "right-0"
                                 : " left-1/2 -translate-x-1/2"
-                                } absolute -top-48 w-[300px] h-[180px] p-2 rounded-lg bg-[#F0CCDF]/25 backdrop-blur-md opacity-0 translate-y-4 scale-95 pointer-events-none group-hover:scale-100 group-hover:translate-y-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 z-10`}
+                                } absolute -top-48 w-[300px] h-[180px] p-2 rounded-lg bg-[#BACDB0]/25 backdrop-blur-md opacity-0 translate-y-4 scale-95 pointer-events-none group-hover:scale-100 group-hover:translate-y-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 z-10`}
                         >
                             <video
                                 ref={(el) => {

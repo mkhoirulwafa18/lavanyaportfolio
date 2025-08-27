@@ -57,6 +57,7 @@ export default function Hero() {
                 { top: "50%", yPercent: -50 },
                 {
                     top: 0, yPercent: 0,
+                    duration: 0.85,
                     ease: "power2.out"
                 }, 2.75
             )
@@ -82,7 +83,7 @@ export default function Hero() {
                 headlineRef.current,
                 { y: 120 },
                 { y: 0, duration: 1.5, ease: "power3.out" },
-                width < 768 ? 2 : 1.9
+                width < 768 ? 2 : 2.85
             );
 
             // Gallery
@@ -153,7 +154,7 @@ export default function Hero() {
                 </div>
 
                 {/* Gallery */}
-                <div className="mt-[24vh] xs:mt-[27vh] sm:mt-[15vh] md:mt-[18vw]">
+                <div className="mt-[24vh] xs:mt-[27vh] sm:mt-[15vh] md:mt-[25vw]">
                     <GalleryMarquee
                         ref={galleryRef}
                         images={gallery_images}
@@ -201,7 +202,7 @@ export default function Hero() {
                         <div className="overflow-hidden">
                             <p
                                 ref={subHeadlineRef}
-                                className={`text-[clamp(20px,1.6vw,32px)] font-light leading-tight -tracking-tight -mt-1 text-center md:text-left`}
+                                className={`text-[clamp(20px,1.6vw,32px)] font-light leading-tight -tracking-tight -mt-1 text-center md:text-right`}
                             >
                                 Translating ideas into captivating visuals that resonate and inspire.
                             </p>

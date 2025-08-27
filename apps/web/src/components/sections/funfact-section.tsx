@@ -70,6 +70,7 @@ export default function FunFactSection() {
                 <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-white/10 bg-[#BACDB0] p-3 md:p-4">
                     <div ref={imageRef} className="absolute inset-3">
                         <Image
+                            key={fact.image}
                             src={fact.image}
                             alt={`fun-fact-${ffIndex}`}
                             fill
@@ -78,7 +79,6 @@ export default function FunFactSection() {
                     </div>
                 </div>
 
-                {/* Text + Counter box (container intact, only content animates) */}
                 <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-white/10 bg-[#BACDB0] p-8 md:p-4 text-background flex flex-col justify-between gap-4">
                     <p ref={textRef} className="text-xl md:text-2xl leading-snug font-bold">
                         {fact.description}

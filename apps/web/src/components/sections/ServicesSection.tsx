@@ -91,7 +91,7 @@ export default function Services() {
         <section className="px-4 py-8 overflow-hidden">
             <h2
                 id="services-title"
-                className="text-[clamp(24px,2vw,60px)] font-semibold mb-4 lg:mb-6 relative"
+                className="text-[clamp(24px,2vw,60px)] font-semibold mb-4 lg:mb-6 relative text-[#BACDB0]"
             >
                 Services
             </h2>

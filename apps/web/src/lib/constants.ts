@@ -126,3 +126,15 @@ export const socialLinks: SocialLink[] = [
     videoUrl: "videos/tiktok.webm",
   },
 ];
+
+export const serviceOptions = [
+  "UGC",
+  "Brand Photography",
+  "Short-Form Video",
+  "Content Strategy",
+  "Identity",
+  "Account Management",
+  "Other",
+];
+
+export const budgetOptions = ["Under $500", "$500-$1k", "$1k-$2.5k", "$2.5k-$5k", "$5k+"];
