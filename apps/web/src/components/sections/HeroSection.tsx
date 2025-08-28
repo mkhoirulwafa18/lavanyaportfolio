@@ -163,7 +163,6 @@ export default function Hero() {
                         gapPx={30}
                         shape1Light={shape_1}
                         shape2Light={shape_2}
-                        imgProps={{ priority: true }}
                     />
                 </div>
                 {/* End of Gallery */}

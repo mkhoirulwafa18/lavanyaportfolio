@@ -49,7 +49,7 @@ export const services: Service[] = [
     textColor: "#4B0018"
   },
   {
-    title: "UI Implementation",
+    title: "Design to Code",
     description:
       "I transform design mockups into functional, pixel-perfect interfaces while maintaining design consistency and ensuring smooth user interactions.",
     keywords: [
@@ -129,7 +129,7 @@ export const socialLinks: SocialLink[] = [
 
 export const serviceOptions = [
   "Frontend Development",
-  "UI Implementation",
+  "Design to Code",
   "Interactive Experiences",
   "Technical Optimization",
   "Website Audit",
