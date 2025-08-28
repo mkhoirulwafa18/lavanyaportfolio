@@ -154,7 +154,7 @@ export default function Hero() {
                 </div>
 
                 {/* Gallery */}
-                <div className="mt-[24vh] xs:mt-[27vh] sm:mt-[15vh] md:mt-[25vw]">
+                <div className="mt-[24vh] xs:mt-[27vh] sm:mt-[15vh] md:mt-[22vw] lg:mt-[17.5vw] xl:mt-[15vw]">
                     <GalleryMarquee
                         ref={galleryRef}
                         images={gallery_images}
@@ -170,8 +170,7 @@ export default function Hero() {
 
                 {/* Bottom Headline */}
                 <div
-                    className={`overflow-hidden absolute left-4 right-4 xs:top-[80vh] sm:top-[70vh] md:top-[12.5vw] ${isInstagram ? "bottom-[17vh]" : "top-[80vh]"
-                        }`}
+                    className={`overflow-hidden absolute left-4 right-4 xs:top-[80vh] sm:top-[70vh] md:top-[12.5vw] lg:top-[11vw] ${isInstagram ? "bottom-[17vh]" : "top-[80vh]"}`}
                 >
                     <div className="flex flex-col gap-0.5 md:gap-0 md:flex-row justify-between items-center relative text-[#BACDB0]">
                         <div className="overflow-hidden">
@@ -179,7 +178,7 @@ export default function Hero() {
                                 ref={headlineRef}
                                 className="text-[clamp(20px,1.6vw,32px)] font-bold py-1 leading-[1.2] text-center md:text-left"
                             >
-                                Visual Brand Storyteller
+                                Frontend Engineer
                             </p>
                         </div>
 
@@ -204,7 +203,7 @@ export default function Hero() {
                                 ref={subHeadlineRef}
                                 className={`text-[clamp(20px,1.6vw,32px)] font-light leading-tight -tracking-tight -mt-1 text-center md:text-right`}
                             >
-                                Translating ideas into captivating visuals that resonate and inspire.
+                                Code that connects and performs.
                             </p>
                         </div>
                     </div>

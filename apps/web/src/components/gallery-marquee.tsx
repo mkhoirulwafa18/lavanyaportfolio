@@ -131,7 +131,7 @@ const GalleryMarquee: React.FC<GalleryMarqueeProps & { ref: React.Ref<HTMLDivEle
                                     src={src}
                                     alt={`gallery-img-${i}`}
                                     style={{ height: "auto" }}
-                                    className="w-[45vw] md:w-[40vw] h-auto"
+                                    className="w-[45vw] md:w-[40vw] lg:w-[25vw] xl:w-[18vw] h-auto"
                                     {...imgProps}
                                 />
                             </div>

@@ -11,7 +11,6 @@ const ContactModalContext = createContext<ContactModalContextType | undefined>(u
 export function ContactModalProvider({ children }: { children: ReactNode }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const toggleModal = () => {
-        console.info(`isModalOpen => ${isModalOpen}`)
         setIsModalOpen((open) => !open);
     }
 
@@ -24,7 +23,6 @@ export function ContactModalProvider({ children }: { children: ReactNode }) {
 
 export function useContactModal() {
     const context = useContext(ContactModalContext);
-    console.info(`isModalOpen ==========> ${context?.isModalOpen}`)
     if (!context) {
         throw new Error("useContactModal must be used within a ContactModalProvider");
     }

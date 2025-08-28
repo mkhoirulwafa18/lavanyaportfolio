@@ -278,8 +278,8 @@ export default function PhysicsContactButtons({
                     // Set flag to true so this only happens once
                     bodiesAdded = true;
 
-                    // Optionally, kill the ScrollTrigger since we don't need it anymore
-                    scrollTrigger.kill();
+                    // // Optionally, kill the ScrollTrigger since we don't need it anymore
+                    // scrollTrigger.kill();
                 }
             },
         });
@@ -328,5 +328,5 @@ export default function PhysicsContactButtons({
         };
     }, [containerRef, toggleModal]);
 
-    return <div></div>;
+    return <div suppressHydrationWarning></div>;
 }

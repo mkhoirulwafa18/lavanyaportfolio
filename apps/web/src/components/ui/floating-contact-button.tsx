@@ -42,15 +42,27 @@ export default function FloatingContactButton({
 
     // Slide away when footer is in view or modal open
     useEffect(() => {
-        if (!buttonRef.current) return;
-        const show = !isModalOpen && !footerRef?.current?.getBoundingClientRect().top;
-        gsap.to(buttonRef.current, {
-            y: isModalOpen ? 200 : 0,
-            scale: isModalOpen ? 0.8 : 1,
-            duration: 1,
-            ease: "power4.out",
-        });
-    }, [isModalOpen]);
+        if (!buttonRef.current || !footerRef?.current) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                const isFooterVisible = entry.isIntersecting;
+                gsap.to(buttonRef.current, {
+                    y: isFooterVisible ? 200 : 0,
+                    scale: isFooterVisible ? 0.8 : 1,
+                    duration: 1,
+                    ease: "power4.out",
+                });
+            },
+            {
+                threshold: 0.1 // Trigger when at least 10% of footer is visible
+            }
+        );
+
+        observer.observe(footerRef.current);
+
+        return () => observer.disconnect();
+    }, [footerRef]);
 
     const handleClick = () => {
         if (isModalOpen && formRef.current) {
@@ -75,7 +87,7 @@ export default function FloatingContactButton({
                         } w-full h-full rounded-full overflow-hidden relative group-hover:opacity-0 group-hover:scale-70 transition-all duration-200 ease-[cubic-bezier(0.64,0.57,0.67,1.53)]`}
                 >
                     <Image
-                        src="/images/about/image-4.jpg"
+                        src="/avatar.webp"
                         alt="logo"
                         fill
                         className="w-full h-auto object-cover object-center"

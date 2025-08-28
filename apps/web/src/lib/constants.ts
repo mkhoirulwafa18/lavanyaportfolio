@@ -33,64 +33,64 @@ type Service = {
 
 export const services: Service[] = [
   {
-    title: "UGC",
+    title: "Frontend Development",
     description:
-      "I leverage authentic content created by users to build trust and engagement with your audience, enhancing brand credibility and reach.",
+      "I build responsive, accessible web applications using modern frameworks and best practices to create seamless user experiences across all devices.",
     keywords: [
-      "Authenticity",
-      "Engagement",
-      "Trust",
-      "Community Building",
-      "Brand Advocacy",
-      "Organic Reach",
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Responsive Design",
+      "Web Performance",
+      "Cross-Browser Compatibility"
     ],
     imageUrl: "/images/services/image-1.jpg",
     bgColor: "#FFBED6",
     textColor: "#4B0018"
   },
   {
-    title: "Photography",
+    title: "UI Implementation",
     description:
-      "I capture high-quality images that tell your brand's story, evoke emotions, and create a lasting impression on your audience.",
+      "I transform design mockups into functional, pixel-perfect interfaces while maintaining design consistency and ensuring smooth user interactions.",
     keywords: [
-      "High-Quality Images",
-      "Brand Storytelling",
-      "Visual Appeal",
-      "Emotional Connection",
-      "Professional Photography",
-      "Creative Direction",
+      "HTML/CSS",
+      "CSS-in-JS",
+      "Figma to Code",
+      "Pixel-Perfect",
+      "Design Systems",
+      "Component Libraries"
     ],
     imageUrl: "/images/services/image-2.jpg",
     bgColor: "#BAD6DA",
     textColor: "#1A4A4A"
   },
   {
-    title: "Short-Form Video",
+    title: "Interactive Experiences",
     description:
-      "I produce engaging short-form videos that capture attention quickly, convey your message effectively, and drive social media engagement.",
+      "I create engaging user interactions and animations that enhance usability and provide meaningful feedback through intuitive micro-interactions.",
     keywords: [
-      "Engaging Content",
-      "Quick Attention",
-      "Effective Messaging",
-      "Social Media Engagement",
-      "Video Production",
-      "Creative Storytelling",
+      "Animations",
+      "User Interactions",
+      "Framer Motion",
+      "Micro-Interactions",
+      "WebGL",
+      "Canvas API"
     ],
     imageUrl: "/images/services/image-3.jpg",
     bgColor: "#A5C572",
     textColor: "#3D7337"
   },
   {
-    title: "Content Strategy",
+    title: "Technical Optimization",
     description:
-      "I create social strategies to maximize reach, engagement, and conversions through data-driven insights and creative execution.",
+      "I optimize web applications for performance, accessibility and SEO while maintaining clean code architecture and development best practices.",
     keywords: [
-      "Research & Insights",
-      "Purpose, Mission, Vision",
-      "Value Propositions",
-      "Brand Voice",
-      "Verbal Identity",
-      "Personality Traits",
+      "Performance Optimization",
+      "Core Web Vitals",
+      "Accessibility (a11y)",
+      "SEO",
+      "Code Review",
+      "Technical Documentation"
     ],
     imageUrl: "/images/services/image-4.jpg",
     bgColor: "#f4e89b",
@@ -128,12 +128,12 @@ export const socialLinks: SocialLink[] = [
 ];
 
 export const serviceOptions = [
-  "UGC",
-  "Brand Photography",
-  "Short-Form Video",
-  "Content Strategy",
-  "Identity",
-  "Account Management",
+  "Frontend Development",
+  "UI Implementation",
+  "Interactive Experiences",
+  "Technical Optimization",
+  "Website Audit",
+  "Consultation",
   "Other",
 ];
 

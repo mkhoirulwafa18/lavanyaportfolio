@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ReactLenis from 'lenis/react';
 import { Bricolage_Grotesque, Righteous } from "next/font/google";
 import "../index.css";
 import { ContactModalProvider } from "@/contexts/contact-modal-context";
@@ -22,6 +23,16 @@ export const metadata: Metadata = {
 	description: "jazzicreatesclone",
 };
 
+const noOverlayWorkaroundScript = `
+  window.addEventListener('error', event => {
+    event.stopImmediatePropagation()
+  })
+
+  window.addEventListener('unhandledrejection', event => {
+    event.stopImmediatePropagation()
+  })
+`
+
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -29,19 +40,26 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body
-				className={`${bricolageGrotesque.variable} ${righteous.variable} antialiased`} suppressHydrationWarning
-			>
+			{process.env.NEXT_PUBLIC_URL?.includes('localhost') && (
+				<head>
+					<script dangerouslySetInnerHTML={{ __html: noOverlayWorkaroundScript }} />
+				</head>
+			)}
+			<ReactLenis root>
 				<FooterProvider>
-					<ContactModalProvider>
-						<TitleChanger />
-						<div className="bg-background grid grid-rows-[auto_1fr] min-h-svh ">
-							{children}
-						</div>
-						<ContactModal />
-					</ContactModalProvider>
+					<body
+						className={`${bricolageGrotesque.variable} ${righteous.variable} antialiased`} suppressHydrationWarning
+					>
+						<ContactModalProvider>
+							<TitleChanger />
+							<div className="bg-background grid grid-rows-[auto_1fr] min-h-svh ">
+								{children}
+							</div>
+							<ContactModal />
+						</ContactModalProvider>
+					</body>
 				</FooterProvider>
-			</body>
+			</ReactLenis>
 		</html>
 	);
 }

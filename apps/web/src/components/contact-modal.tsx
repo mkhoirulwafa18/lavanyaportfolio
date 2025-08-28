@@ -52,7 +52,7 @@ export default function ContactModal() {
     }, [isModalOpen, toggleModal]);
 
     return (
-        <>
+        <div suppressHydrationWarning>
             {/* Backdrop */}
             <div
                 ref={backdropRef}
@@ -87,6 +87,6 @@ export default function ContactModal() {
             <FloatingContactButton
                 formRef={formRef as React.RefObject<ContactFormRef>}
             />
-        </>
+        </div>
     );
 }

@@ -67,7 +67,7 @@ export default function FunFactSection() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">
 
                 {/* Image box (container intact, only content animates) */}
-                <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-white/10 bg-[#BACDB0] p-3 md:p-4">
+                <div className="relative w-full aspect-square md:aspect-6/5 overflow-hidden rounded-lg border border-white/10 bg-[#BACDB0] p-3 md:p-4">
                     <div ref={imageRef} className="absolute inset-3">
                         <Image
                             key={fact.image}
@@ -79,11 +79,11 @@ export default function FunFactSection() {
                     </div>
                 </div>
 
-                <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-white/10 bg-[#BACDB0] p-8 md:p-4 text-background flex flex-col justify-between gap-4">
-                    <p ref={textRef} className="text-xl md:text-2xl leading-snug font-bold">
+                <div className="relative w-full aspect-square md:aspect-6/5 overflow-hidden rounded-lg border border-white/10 bg-[#BACDB0] p-8 md:p-12 text-background flex flex-col justify-between gap-4">
+                    <p ref={textRef} className="text-xl md:text-2xl lg:text-4xl leading-snug font-bold">
                         {fact.description}
                     </p>
-                    <div className="text-9xl font-extrabold leading-none">
+                    <div className="text-9xl lg:text-[250px] font-extrabold leading-none">
                         <span ref={counterRef}>{fact.number}</span>+
                     </div>
                 </div>
