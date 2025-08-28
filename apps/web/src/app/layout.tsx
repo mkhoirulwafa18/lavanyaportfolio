@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next"
 import ReactLenis from 'lenis/react';
 import { Bricolage_Grotesque, Righteous } from "next/font/google";
 import "../index.css";
@@ -57,6 +58,7 @@ export default function RootLayout({
 							</div>
 							<ContactModal />
 						</ContactModalProvider>
+						<Analytics />
 					</body>
 				</FooterProvider>
 			</ReactLenis>
